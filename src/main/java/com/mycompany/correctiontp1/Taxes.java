@@ -27,7 +27,7 @@ public class Taxes {
     public void setMarque(String marque) {
         this.marque = marque;
     }
-    public void calculerTtc()
+    public double calculerTtc()
     {
         double taxe=0;
         double ttc=0;
@@ -35,6 +35,7 @@ public class Taxes {
         {
             ttc=prix *1.12;
             System.out.println("le prix TTC est "+ttc);
+            
         }
         else if(this.prix<1000)
         {
@@ -50,7 +51,7 @@ public class Taxes {
         
         }
     
-    
+    return ttc;
     }
 
     public Taxes(double prix, String marque) {
